@@ -54,7 +54,7 @@ def Musuh_spawn(musuh_list, bullets):
         for musuh_rect in musuh_list:
             for bullet in bullets:
                 if musuh_rect.colliderect(bullet):
-                    print('hit')
+                    # print('hit')
                     Player_bullet.remove(bullet)
                     musuh_list.remove(musuh_rect)
                     pygame.event.post(pygame.event.Event(HIT))
@@ -75,7 +75,7 @@ def Bullet_move(bullets):
         # pygame.draw.rect(WIN, 'white', bullet)
         bullet.x += 10
         if musuh_rect.colliderect(bullet):
-            print('hit')
+            # print('hit')
             # pygame.event.post(pygame.event.Event(RED_HIT))
             Player_bullet.remove(bullet)
         
@@ -103,12 +103,12 @@ def main():
                 pygame.quit()
             if event.type == musuh_timer:
                 Musuh_list.append(lawan.get_rect(center = (900, (random.randrange(50, 450)))))
-                print(Musuh_list)
+                # print(Musuh_list)
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_SPACE and len(Player_bullet) < 4:
+                if event.key == pygame.K_SPACE and len(Player_bullet) < 3:
                     bullet = pygame.Rect(player_rect.midright[0], player_rect.midright[1], 10, 4)
                     Player_bullet.append(bullet)
-                    print(player_rect.midright)
+                    # print(player_rect.midright)
             if event.type == HIT:
                 score_counter += 1
 
