@@ -12,7 +12,7 @@ bg = pygame.image.load('Assets/space1.png').convert()
 lawan = pygame.transform.rotate((pygame.image.load('Assets/spaceship_red(resized).png').convert_alpha()), -90)
 pemain = pygame.transform.rotate((pygame.image.load('Assets/spaceship_yellow(resized).png').convert_alpha()), -90)
 
-FONT = pygame.font.SysFont('comicsans', 40)
+FONT = pygame.font.SysFont('Assets/Cyberpunks Italic.ttf', 40)
 
 def Window(bullets, score_counter):
     WIN.blit(bg, (0, 0))
